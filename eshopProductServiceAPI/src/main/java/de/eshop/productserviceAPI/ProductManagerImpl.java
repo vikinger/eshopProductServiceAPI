@@ -79,7 +79,7 @@ public class ProductManagerImpl implements ProductManager {
 	
 	@Override
 	public List<Category> getCategories() {
-		Category[] categories = restTemplate.getForObject(CATEGORY_URI + "s", Category[].class);
+		Category[] categories = restTemplate.getForObject(BASE_URI + "/categories", Category[].class);
 	    return Arrays.asList(categories);
 	}
 
